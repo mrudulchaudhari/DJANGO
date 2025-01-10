@@ -6,4 +6,20 @@ ALL CHAI
 
 {% block content %}
 <h1>MRUDUL CHAUDHARI | ALL CHAI</h1>
+
+<div class = "grid grid-cols-4 gap-4 m-4">
+    {% for chai in chais %}
+    <div class="bg-blue-800 p-5 rounded">
+        <img class = "shadow-lg" src="{{chai.image.url}}" alt="">
+        <h3 class= "text-2xl font-bold"> {{chai.name}}</h3>
+        <a href="#">
+            <button 
+            type = "button"
+            class = "w-[100%] bg-orange-400 rounded-md text-white hover:bg-orange-600">
+                {{chai.type}} - {{chai.id}}
+            </button>
+        </a>
+    </div>
+{% endfor %}
+</div>
 {% endblock %}
